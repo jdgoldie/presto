@@ -16,6 +16,9 @@ package com.facebook.presto.cassandra;
 import com.facebook.presto.spi.Plugin;
 import com.facebook.presto.spi.connector.ConnectorFactory;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+
+import java.util.Set;
 
 public class CassandraPlugin
         implements Plugin
@@ -24,5 +27,11 @@ public class CassandraPlugin
     public Iterable<ConnectorFactory> getConnectorFactories()
     {
         return ImmutableList.of(new CassandraConnectorFactory("cassandra"));
+    }
+
+    @Override
+    public Set<Class<?>> getFunctions()
+    {
+        return ImmutableSet.<Class<?>>builder().add(ResampleDate.class).build();
     }
 }
