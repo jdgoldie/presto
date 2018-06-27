@@ -1,3 +1,8 @@
+### Note
+
+This is my fork of Presto where I experiment with techniques for analyzing and querying data by adding functions and/or plugins to Facebook's excellent tool.
+
+
 # Presto [![Build Status](https://travis-ci.org/prestodb/presto.svg?branch=master)](https://travis-ci.org/prestodb/presto)
 
 Presto is a distributed SQL query engine for big data.
